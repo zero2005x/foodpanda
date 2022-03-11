@@ -9,6 +9,7 @@ cachetools==5.0.0
 certifi==2021.10.8
 charset-normalizer==2.0.12
 channels==3.0.4
+channels-redis==3.4.0
 dj-database-url==0.5.0
 dj-static==0.0.6
 Django==4.0.3

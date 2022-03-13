@@ -6,7 +6,11 @@ import sys
 
 def main():
     """Run administrative tasks."""
+<<<<<<< HEAD
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'foodPanda.settings')
+=======
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'foodpanda.settings')
+>>>>>>> 937ad22ce3e0cb7808322840627da0d93764810e
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

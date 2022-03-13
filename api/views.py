@@ -3,11 +3,17 @@ from html5lib import serialize
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from TestModel.models import product
+<<<<<<< HEAD
 from TestModel.models import cap
 from TestModel.models import shop
 from . serializers import ProductSerializer
 from . serializers import ShopSerializer
 from . serializers import CapSerializer
+=======
+from TestModel.models import shop
+from . serializers import ProductSerializer
+from . serializers import ShopSerializer
+>>>>>>> 937ad22ce3e0cb7808322840627da0d93764810e
 def index(request):
     
     return request
@@ -36,6 +42,7 @@ def addItemShop(request):
     serializer = ShopSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
+<<<<<<< HEAD
     return Response(serializer.data)
 
 @api_view(['POST'])
@@ -50,3 +57,6 @@ def getDataCap(request):
     cap1 = cap.objects.all()
     serializer = CapSerializer(cap1, many=True)
     return Response(serializer.data)
+=======
+    return Response(serializer.data)
+>>>>>>> 937ad22ce3e0cb7808322840627da0d93764810e

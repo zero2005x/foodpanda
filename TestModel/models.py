@@ -58,6 +58,7 @@ class manufacturer(models.Model):
     manufacturerAddress = models.CharField(max_length=255,blank=True, default='')
     def __str__(self):
         return self.manufacturerID
+<<<<<<< HEAD
 
 class cap(models.Model):
     capID = models.CharField(max_length=25, null=False, primary_key=True)
@@ -70,3 +71,5 @@ class cap(models.Model):
     def __str__(self):
         return self.capID
 
+=======
+>>>>>>> 937ad22ce3e0cb7808322840627da0d93764810e

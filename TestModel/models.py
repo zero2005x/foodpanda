@@ -58,3 +58,15 @@ class manufacturer(models.Model):
     manufacturerAddress = models.CharField(max_length=255,blank=True, default='')
     def __str__(self):
         return self.manufacturerID
+
+class cap(models.Model):
+    capID = models.CharField(max_length=25, null=False, primary_key=True)
+    capProfile = models.CharField(max_length=50, blank=True, default='')
+    capMaterial = models.CharField(max_length=50, blank=True, default='')
+    capProcess = models.CharField(max_length=50, blank=True, default='')
+    capFront = models.CharField(max_length=50, blank=True, default='')
+    capPrice = models.IntegerField(default=0)
+    CapImageName = models.CharField(max_length=50, blank=True, default='')
+    def __str__(self):
+        return self.capID
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "header.html" %}
+<body>
+{% load my_tags %}
+<p>{{ name }}</p>
+<p>{{ views_list}}</p>
+<p>{{ views_list.0 }}</p>
+<p>{{ views_dic }}</p>
+<p>{{ views_dic.name }}</p>
+<p>{{ views_dic.age  }}</p>
+
+
+    <p>
+        {% if score > 95 and score <= 100 %}
+            great
+        {% elif score >= 85 and score <= 95 %}
+            good
+        {% elif score >= 60 and score <= 85 %}
+            pass
+        {% else %}
+            fail
+        {% endif %}
+    </p>
+
+{% for className in views_list %}
+    <p>{{ className }}</p>
+{% endfor %}
+{% for key, value in views_dic.items %}
+    <p>({{key}}: {{value}})</p>
+{% endfor %}
+
+{% for i in emptyList %}
+    <p>i</p>
+    {% empty %}
+    <p>list is empty</p>
+{% endfor %}
+
+<p> 自定義的標籤: {% mul 11 22 33 %}</p>
+{% my_input username_input UserName %} 
+
+
+
+</body>
+</html>

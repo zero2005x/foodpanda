@@ -88,13 +88,12 @@ WSGI_APPLICATION = 'foodpanda.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd9qn8tiqantbgn',
-        'USER': 'ncvoskinekovwo',
-        'PASSWORD': '6359021685717f8aaa337f405a5e9a6d9b5e361c91bf0d0449f6ca21d48745e4',
-        'HOST': 'ec2-3-221-100-217.compute-1.amazonaws.com',
+        'NAME': 'd85mfdce3pnsco',
+        'USER': 'mbfqrabooahmwd',
+     'PASSWORD': '2ebe7b6fb1df775535ce6cfcb625b6e6c9f8ab787bc4cb585bda95cf84782641',
+        'HOST': 'ec2-34-231-193-74.compute-1.amazonaws.com',
         'PORT': '5432',
-        
-        
+
     }
 }
 

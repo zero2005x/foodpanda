@@ -12,12 +12,13 @@ from TestModel.models import Meals
 from TestModel.models import Drivers
 from TestModel.models import Customers
 from TestModel.models import product
+from TestModel.models import order
 from TestModel.models import cap
 from TestModel.models import shop
 from TestModel.models import Store
 
 #Restaurants, Orders, OrderDetails, Meals, Drivers, Customers
-
+from . serializers import OrderSerializer
 from . serializers import RestaurantsSerializer
 from . serializers import OrdersSerializer
 from . serializers import OrderDetailsSerializer
@@ -34,6 +35,19 @@ from . serializers import StoreSerializer
 
 def index(request):
     return request
+
+@api_view(['GET'])
+def getDataOrder(request):
+    order1 = order.objects.all()
+    serializer = ShopSerializer(order1, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def addItemOrder(request):
+    serializer = ShopSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
 
 @api_view(['GET'])
 def getDataShop(request):

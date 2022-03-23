@@ -2,13 +2,21 @@ from rest_framework import serializers
 from TestModel.models import product
 from TestModel.models import shop
 from TestModel.models import cap
+
+from TestModel.models import order
 from TestModel.models import Restaurants
+
 from TestModel.models import Orders
 from TestModel.models import OrderDetails
 from TestModel.models import Meals
 from TestModel.models import Drivers
 from TestModel.models import Customers
 from TestModel.models import Store
+
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = order
+        fields = '__all__'
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:

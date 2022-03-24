@@ -39,12 +39,12 @@ def index(request):
 @api_view(['GET'])
 def getDataOrder(request):
     order1 = order.objects.all()
-    serializer = ShopSerializer(order1, many=True)
+    serializer = OrderSerializer(order1, many=True)
     return Response(serializer.data)
 
 @api_view(['POST'])
 def addItemOrder(request):
-    serializer = ShopSerializer(data=request.data)
+    serializer = OrderSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
         return Response(serializer.data)

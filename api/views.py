@@ -26,7 +26,7 @@ from . serializers import OrderDetailsSerializer
 from . serializers import MealsSerializer
 from . serializers import DriversSerializer
 from . serializers import CustomersSerializer
-
+from . serializers import PositionSerializer
 from . serializers import ProductSerializer
 from . serializers import ShopSerializer
 from . serializers import CapSerializer

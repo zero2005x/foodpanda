@@ -118,7 +118,7 @@ class Meals(models.Model):
 
 
 class OrderDetails(models.Model):
-    orderID = models.ForeignKey('Orders', on_delete=models.CASCADE)
+    orderID = models.CharField(max_length=25, null=False, primary_key=True)
     productID = models.CharField(max_length=150, null=True)
     quantity = models.IntegerField(null=False, default=0)
     

@@ -16,6 +16,7 @@ from TestModel.models import order
 from TestModel.models import cap
 from TestModel.models import shop
 from TestModel.models import Store
+from TestModel.models import position
 
 #Restaurants, Orders, OrderDetails, Meals, Drivers, Customers
 from . serializers import OrderSerializer
@@ -35,6 +36,20 @@ from . serializers import StoreSerializer
 
 def index(request):
     return request
+
+@api_view(['GET'])
+def getDataPosition(request):
+    position1 = position.objects.all()
+    serializer = PositionSerializer(position1, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def addItemPosition(request):
+    serializer = PositionSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+
 
 @api_view(['GET'])
 def getDataOrder(request):

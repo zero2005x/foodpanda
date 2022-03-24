@@ -13,6 +13,12 @@ from TestModel.models import Drivers
 from TestModel.models import Customers
 from TestModel.models import Store
 
+
+class PositionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = position
+        fields = '__all__'
+
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = order

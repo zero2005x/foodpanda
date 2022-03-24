@@ -5,7 +5,7 @@ from TestModel.models import cap
 
 from TestModel.models import order
 from TestModel.models import Restaurants
-
+from TestModel.models import position
 from TestModel.models import Orders
 from TestModel.models import OrderDetails
 from TestModel.models import Meals
